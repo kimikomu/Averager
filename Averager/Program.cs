@@ -31,9 +31,10 @@ namespace Averager
 
 				try
 				{
+					// convert the input to a double
 					var number = double.Parse(input);
 
-					// add numbers entered together
+					// add together the numbers entered
 					runningTotal += number;
 					counter += 1;
 				}
@@ -49,6 +50,7 @@ namespace Averager
 
 			while (true)
 			{
+				// show the average and prompt user to quit
 				Console.Write("Thre average of the numbers entered is " + average + ". Enter \"quit\" to exit: ");
 				var exitInput = Console.ReadLine();
 				if (exitInput.ToLower() == "quit")
